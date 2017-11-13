@@ -2,7 +2,11 @@
 #define object_h
 #include <string>
 
+using namespace std;
+
 class object{
-  virtual bool equals()=0;
+public:
+  virtual bool equals(object*)=0;
   virtual string toString()=0;
-}
+};
+#endif

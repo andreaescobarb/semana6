@@ -1,10 +1,13 @@
 #ifndef Figura_H
 #define Figura_H
+#include "object.h"
 
-class Figura{
+class Figura: public object{
 	public:
-	virtual double getArea();
-	virtual double getPerimetro()=0;
+		virtual double getArea();
+		virtual double getPerimetro()=0;
+		virtual bool equals(object*)=0;
+		virtual string toString()=0;
 };
 
 #endif
