@@ -6,6 +6,8 @@ class Figura: public object{
 	public:
 		virtual double getArea();
 		virtual double getPerimetro()=0;
+
+		//heredados de object
 		virtual bool equals(object*)=0;
 		virtual string toString()=0;
 };

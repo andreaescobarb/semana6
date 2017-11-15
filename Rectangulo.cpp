@@ -1,4 +1,5 @@
 #include "Rectangulo.h"
+#include <typeinfo>
 
 Rectangulo::Rectangulo(double pBase, double pAltura){
 	base = pBase;
@@ -11,4 +12,19 @@ double Rectangulo::getArea(){
 
 double Rectangulo::getPerimetro(){
 	return base*2+altura*2;
+}
+
+bool Rectangulo::equals(object* pOther){
+	if (typeid(*pOther)==typeid(Rectangulo)) {
+		Rectangulo* other = dynamic_cast<Rectangulo*>(pOther);
+
+		return this->getArea()==other->getArea();
+
+	} else{
+			return false;
+	}
+}
+
+string Rectangulo::toString(){
+	return "toDO";
 }

@@ -11,6 +11,8 @@ class Rectangulo: public Figura{
 		Rectangulo(double, double);
 		virtual double getArea();
 		virtual double getPerimetro();
+		virtual bool equals(object*);
+		virtual string toString();
 
 };
 #endif
